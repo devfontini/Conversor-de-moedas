@@ -1,0 +1,153 @@
+/* Resetando alguns estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos globais */
+body {
+    background: url('https://wallpapers.com/images/hd/1920x1080-aesthetic-5n9t0pm3cknenux6.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente para contraste */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 450px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Estilo do formulário */
+.converter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-section, .output-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Input e Select */
+input[type="number"], input[type="text"], select {
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    outline: none;
+    width: 180px;
+    background-color: #f1f1f1;
+    color: #555;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:hover, input[type="number"]:hover, select:hover {
+    border-color: #007BFF;
+}
+
+input[type="number"]:focus, input[type="text"]:focus, select:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.2);
+}
+
+/* Estilo do botão de conversão */
+button {
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Animação de carregamento e erro */
+.error-message {
+    margin-top: 20px;
+    color: red;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.error-message.show {
+    opacity: 1;
+}
+
+/* Adicionando um fundo suave e sombras nas opções de moeda */
+select {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    font-size: 1rem;
+}
+
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Estilo geral do layout */
+span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Efeitos de transição no container */
+.container:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Pequeno ajuste para dispositivos móveis */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input[type="number"], input[type="text"], select {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
